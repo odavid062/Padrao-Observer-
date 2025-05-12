@@ -1,4 +1,4 @@
-# 🛡️ Sistema Observer de Preços
+# 🛡 Sistema Observer de Preços
 
 Este projeto é uma aplicação completa demonstrando o padrão de projeto **Observer** em uma arquitetura desacoplada:
 
@@ -8,7 +8,7 @@ Este projeto é uma aplicação completa demonstrando o padrão de projeto **Obs
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 | Camada      | Tecnologias               |
 |-------------|---------------------------|
@@ -17,7 +17,7 @@ Este projeto é uma aplicação completa demonstrando o padrão de projeto **Obs
 
 ---
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
 - Cadastro de produtos
 - Atualização de preço de produtos
@@ -28,7 +28,7 @@ Este projeto é uma aplicação completa demonstrando o padrão de projeto **Obs
 
 ---
 
-## 📦 Como rodar o projeto
+##  Como rodar o projeto
 
 ### Backend (Spring Boot)
 
@@ -54,7 +54,7 @@ Este projeto é uma aplicação completa demonstrando o padrão de projeto **Obs
 
 ---
 
-## 💡 Observações
+##  Observações
 
 - O **backend e frontend são projetos separados**, cada um rodando na sua própria porta.
 - O **frontend consome as APIs do backend via Axios**, apontando para `http://localhost:8080`.
@@ -62,7 +62,7 @@ Este projeto é uma aplicação completa demonstrando o padrão de projeto **Obs
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
-David Rodrigues 👊  
+David Rodrigues   
 Aprendendo na prática como integrar, desacoplar e entregar soluções reais com arquitetura limpa.
