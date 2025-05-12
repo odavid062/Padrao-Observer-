@@ -1,4 +1,4 @@
-# 🛡 Sistema Observer de Preços
+#  Sistema Observer de Preços
 
 Este projeto é uma aplicação completa demonstrando o padrão de projeto **Observer** em uma arquitetura desacoplada:
 
