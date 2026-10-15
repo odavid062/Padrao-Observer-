@@ -71,7 +71,7 @@ flowchart LR
 |---|---|---|
 | Frontend | React | 18 |
 | Frontend | Vite | 5 |
-| Frontend | Axios | — |
+| Frontend | Axios | 1.4.0 |
 | Backend | Java | 17 |
 | Backend | Spring Boot | 3.4.5 |
 | Backend | Springdoc OpenAPI | 2.3.0 |
@@ -79,6 +79,13 @@ flowchart LR
 ---
 
 ## Como Executar
+
+### Pré-requisitos
+
+- [Git](https://git-scm.com)
+- [Java JDK 17](https://openjdk.org/projects/jdk/17/)
+- [Node.js](https://nodejs.org/) (versão 18 ou superior) e npm
+- [Docker](https://www.docker.com/) e Docker Compose (opcional, para execução via contêineres)
 
 ### Com Docker (recomendado)
 
@@ -100,6 +107,8 @@ docker compose up --build
 ```bash
 cd back-end
 ./mvnw spring-boot:run
+# No Windows:
+.\mvnw.cmd spring-boot:run
 ```
 
 **Frontend:**
@@ -108,6 +117,11 @@ cd front-end
 npm install
 npm run dev
 ```
+
+Scripts disponíveis no frontend (`front-end/package.json`):
+- `npm run dev` — Inicia o servidor de desenvolvimento Vite (porta `5173`)
+- `npm run build` — Compila a aplicação para produção
+- `npm run preview` — Visualiza localmente o build de produção
 
 ---
 
@@ -142,11 +156,27 @@ curl -X PUT http://localhost:8080/api/products/1 \
 
 ---
 
+## Testes
+
+### Backend
+
+Para executar os testes do Spring Boot via Maven Wrapper:
+
+```bash
+cd back-end
+./mvnw test
+# No Windows:
+.\mvnw.cmd test
+```
+
+---
+
 ## Estrutura do Projeto
 
 ```
 Padrao-Observer-/
 ├── back-end/                            # Spring Boot API
+│   ├── Dockerfile
 │   └── src/main/java/com/example/Observer/
 │       ├── controller/
 │       │   └── ProductController.java   # Endpoints REST
@@ -156,6 +186,7 @@ Padrao-Observer-/
 │       │   └── ProductService.java      # Lógica Observer + callbacks
 │       └── ObserverApplication.java
 ├── front-end/                           # React + Vite SPA
+│   ├── Dockerfile
 │   └── src/
 │       ├── App.jsx                      # Componente principal
 │       └── main.jsx
